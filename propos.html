@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - ESDD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ESDD</div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="activite.html">Activités</a></li>
+                <li><a href="mediatheque.html">Médiathèque</a></li>
+                <li><a href="propos.html">À Propos de nous</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="header-card">
+            <h1>École Sans Dépendance Digitale (ESDD)</h1>
+            <p class="subtitle">L'intelligence avant l'écran</p>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="contact-info-block">
+                <h2>À propos de nous</h2>
+                <p>Bienvenue à l'Ecole Sans Dépendance Digitale (ESDD)</p>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone"></i> 07 57 393 99 00</li>
+                    <li><i class="fas fa-envelope"></i> email: ecolesansdependancedigitale.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Adresse : 104 Porte 15. Sue Bhilleraus, MS 33203</li>
+                </ul>
+                <a href="#section-don" class="btn-don">Soutenir notre Cause - Faire un don</a>
+            </div>
+            <div class="members-block">
+                <h2 class="section-title">Notre Équipe</h2>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <div class="member-photo">
+                        <img src="kd.jpg" alt="Fondateur ESDD">
+                        </div>
+                        <div class="member-info">
+                        <h4>KARIM DJIMA</h4>
+                        <p class="member-role">Président Fondateur</p>
+                        </div>
+                    </div>
+                    <div class="member-card">
+                        <div class="member-photo">
+                        <img src="woman%202.png" alt="Secrétaire ESDD">
+                        </div>
+                        <div class="member-info">
+                        <h4>Nom du Membre</h4>
+                        <p class="member-role">Secrétaire Générale</p>
+                        </div>
+                    </div>
+                    <div class="member-card">
+                        <div class="member-photo">
+                        <img src="men%201.webp" alt="Membre ESDD">
+                        </div>
+                        <div class="member-info">
+                        <h4>Nom du Membre</h4>
+                        <p class="member-role">Trésorier</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="docs-contact-section">
+        <div class="container docs-contact-grid">
+            <div class="documents-block">
+                <h3>Documents Officiels</h3>
+                <div class="docs-flex">
+                    <div class="doc-card">
+                        <i class="fas fa-file-alt"></i>
+                        <span a href="test.txt" style="color: white">Décret </span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-certificate"></i>
+                        <span a href="test.txt" style="color: white">Agrément</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-block">
+                <h3>Nous Contacter</h3>
+                <form class="contact-form">
+                    <div class="form">
+                        <input type="text" id="name" width="100%" placeholder="Votre Nom complet" required>
+                        <input type="email" id="email" placeholder="Votre Email" required>
+                        <textarea id="message" rows="5" cols="64" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-don" class="donation-section">
+        <div class="container donation-flex">
+            <div class="donation-form">
+                <h2>Soutenir notre cause</h2>
+                <div class="don-form">
+                <input type="text" placeholder="Nom sur la carte">
+                <input type="text" placeholder="Numéro de carte (0000 0000 0000 0000)">
+                <input type="number" placeholder="Montant du don (CFA)" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                <div style="display:flex; gap:10px;">
+                    <input type="text" placeholder="MM/YY">
+                    <input type="text" placeholder="CVC">
+                </div>
+                    <button class="btn-donation">FAIRE UN DON</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <h3>ESDD</h3>
+            <img src="Logo1.png" style="width: 100px; height: auto" alt="Logo ESDD" >
+            <p>École Sans Dépendance Digitale. Promouvoir l'épanouissement et l'intelligence loin des écrans.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="activite.html">Activités</a></li>
+                <li><a href="mediatheque.html">Médiathèque</a></li>
+                <li><a href="propos.html">À propos de nous</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 ESDD - École Sans Dépendance Digitale. Tous droits réservés. Mark</p>
+    </div>
+    </footer>
+    <script src="esdd.js"></script>
+</body>
+</html>

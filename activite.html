@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>ESDD - Activités</title>
+    <style>
+        /* Styles pour la Timeline (Jalons) */
+        .timeline {
+            border-left: 4px solid var(--bleu-esdd);
+            margin: 20px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+      
+        .calendrier {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        .calendrier th, .calendrier td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        .calendrier th { background: var(--bleu-esdd); color: white; }
+        .event-mark { background: var(--vert-esdd); color: white; border-radius: 4px; padding: 2px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ESDD</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="activite.html">Activités</a></li>
+                <li><a href="mediatheque.html">Médiathèque</a></li>
+                <li><a href="propos.html">À Propos de nous</a></li>
+            </ul>
+        </div>
+    </nav>
+     <header class="hero">
+        <div class="header-card">
+            <h1>École Sans Dépendance Digitale (ESDD)</h1>
+            <p class="subtitle">L'intelligence avant l'écran</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Calendrier des Activités</h2>
+        <table class="calendrier">
+            <tr><th>Janvier</th><th>Fevrier</th><th>Mars</th>
+                <th>Avril</th><th>Mai</th><th>Juin</th>
+                <th>Juillet</th><th>Août</th><th>Septembre</th>
+                <th>Octobre</th><th>Novembre</th><th>Décembre</th></tr>
+            <tr>
+                <td>1</td><td>2 <br><span class="event-mark">Atelier</span></td><td>3</td><td>4</td>
+                <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+            </tr>
+            <tr>
+                <td>1</td><td>2</td><td>3</td><td>4</td>
+                <td>5</td><td>6</td><td>7</td><td>8</td><td>9<br><span class="event-mark">Don Livres</span></td><td>10</td><td>11</td><td>12</td>
+            </tr>
+        </table>
+        <h2>Focus sur les activités</h2>
+        <div class="vertical-table-container">
+            <table class="v-table">
+                <tr>
+                    <th colspan="2" class="event-title">📅 Activité I "Atelier zéro Ecran"</th>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                        <td>15 Mars 2026</td>
+                </tr>
+                <tr>
+                    <th>Public</th>
+                        <td>6-12 ans</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                        <td>Jeux de société et peinture.</td>
+                </tr>
+                <tr>
+                    <th>Étapes</th>
+                        <td>
+                            <ul class="step-list">
+                                <li>Annonce: XX XXX</li>
+                                <li>Inscriptions: 05/03</li>
+                                <li>Jour J: 15/03</li>
+                            </ul>
+                        </td>
+                </tr>
+            </table>
+
+            <table class="v-table">
+                <tr>
+                    <th colspan="2" class="event-title" >Activité II "GALA DE CHARITE"</th>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                        <td>Novembre 2026</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                        <td>Charité</td>
+                </tr>
+                <tr>
+                    <th>Objectif</th>
+                        <td>Financer le milieu scolaire.</td>
+                </tr>
+                <tr>
+                    <th>Jalons</th>
+                        <td>
+                            <ul class="step-list">
+                                <li>Logistique</li>
+                                <li>Billetterie</li>
+                                <li>Gala</li>
+                            </ul>
+                        </td>
+                </tr>
+            </table>
+        </div>
+        <h3>Rapport d'activités</h3>
+        <p>📄 <a href="#" style="color: white">Rapport d'activité I.pdf</a></p>
+    </div>
+    <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-about">
+            <h3>ESDD</h3>
+            <img src="Logo1.png" style="width: 100px; height: auto" alt="Logo ESDD" >
+            <p>École Sans Dépendance Digitale. Promouvoir l'épanouissement et l'intelligence loin des écrans.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="activite.html">Activités</a></li>
+                <li><a href="mediatheque.html">Médiathèque</a></li>
+                <li><a href="propos.html">À propos de nous</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 ESDD -École Sans Dépendance Digitale. Tous droits réservés. Mark</p>
+    </div>
+    </footer>
+    <script src="esdd.js"></script>
+</body>
+</html>
+

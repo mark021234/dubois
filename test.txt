@@ -1,0 +1,14 @@
+<p class="testlogo"><img src="Logo1.png" style="width: 80px; height: auto" alt="Logo ESDD" ></p>
+
+
+
+.custom-textarea {
+  width: 100%;        /* Prend toute la largeur disponible */
+  max-width: 600px;   /* Empêche de devenir trop large sur grand écran */
+  height: 200px;      /* Hauteur fixe en pixels */
+  padding: 15px;      /* Espace intérieur pour que le texte ne colle pas aux bords */
+  font-size: 1.1rem;  /* Pour que le texte tapé soit aussi plus lisible */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;   /* Permet à l'utilisateur d'agrandir la hauteur mais pas la largeur */
+}

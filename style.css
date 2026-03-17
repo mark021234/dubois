@@ -1,0 +1,692 @@
+/* Style du lien actif (optionnel) */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+/* Fluidité du passage entre les pages */
+body {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/*--- ACCEUIL ---*/
+:root {
+    --dark-blue: #001f3f;
+    --mid-blue: #003366;
+    --green: #2d5a27;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- Navigation & Burger --- */
+.navbar {
+    background: var(--dark-blue);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-links a:hover {
+    color: #2d5a27; /* Le vert de votre charte */
+    text-decoration: underline;
+}
+
+.logo { font-weight: bold; font-size: 1.5rem; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu-toggle { display: none; }
+
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* --- Sections --- */
+.hero {
+    text-align: center;
+    padding: 20px 20px;
+    background: linear-gradient(to bottom, var(--dark-blue), var(--mid-blue));
+}
+
+.header-card {
+    background: white;
+    color: var(--dark-blue);
+    padding: 15px ;
+    border-radius: 15px;
+    display: inline-block;
+    max-width: 80%;
+}
+    
+.logo{width: 100%; max-width: 200px; border-radius: 15px;}
+.president-content, .donation-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Permet d'aller à la ligne sur mobile */
+}
+
+.text-block { flex: 2; min-width: 300px; }
+.profile-block { flex: 1; text-align: center; min-width: 200px; }
+.profile-block img { width: 100%; max-width: 200px; border-radius: 15px; }
+
+.articles-section { background: var(--green); }
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Automatique ! */
+    gap: 30px;
+}
+
+.donation-form { flex: 1; min-width: 300px; }
+.donation-form input { width: 100%; padding: 12px; margin: 8px 0; border-radius: 5px; border: none; }
+.form-row { display: flex; gap: 10px; }
+
+.tip-card {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 15px;
+    flex: 1;
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    min-width: 383px;
+}
+
+.tip-card::before {
+    content: "";
+    position: absolute;
+    bottom: 11px;  /* Positionné en bas */
+    right: 148px;   /* Positionné à droite */
+    width: 250px;   /* Taille du logo en filigrane */
+    height: 250px;
+    background-image: url('Logo1.png'); /* Remplacez par le nom de votre fichier logo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;   /* Réglage de la transparence (10%) */
+    transform: rotate(0deg); /* Légère rotation pour un look plus design */
+    z-index: -1;    /* Place le logo derrière le texte du conseil */
+    pointer-events: none; /* Le logo ne bloque pas les clics ou la sélection de texte */
+}
+
+.btn-donation {
+    background: var(--green);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+/* Rend le saut vers la section fluide au lieu d'un saut brusque */
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-don {
+    width: 100%;
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #e91e63; /* Un rose/rouge dynamique */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 10px; /* Bords arrondis pour un look moderne */
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.btn-don:hover {
+  background-color: #c2185b;
+  transform: translateY(-2px); /* Petit effet de lévitation */
+}
+/* --- MEDIA QUERIES (Mobile & Tablette) --- */
+
+@media (max-width: 768px) {
+    .burger-icon { display: flex; } /* Affiche le burger */
+
+    .nav-links {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--dark-blue);
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Affiche le menu quand la checkbox est cochée */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .header-card h1 { font-size: 1.2rem; }
+    
+    .president-content, .donation-flex {
+        flex-direction: column; /* Tout mettre sur une seule colonne */
+    }
+}
+
+/*POUR ACTIVITES*/
+
+/* --- Mise en page Globale --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; /* S'assure que le container ne dépasse jamais */
+}
+
+/* --- Grille d'activités adaptative --- */
+.activities-grid {
+    display: grid;
+    /* Créera autant de colonnes de 300px minimum que possible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* --- La Timeline (Barre de progression) --- */
+/* Sur mobile, on la simplifie ou on réduit les espaces */
+.timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px 0;
+    padding: 0 10px;
+}
+.vertical-table-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .v-table {
+        border-collapse: collapse;
+        width: 300px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .v-table th {
+        background-color: #001f3f;
+        color: white;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        width: 40%;
+        font-size: 0.9em;
+        text-transform: uppercase;
+    }
+
+    .v-table td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 0.95em;
+    }
+
+    .event-title {
+        background-color: #001f3f;
+        color: white !important;
+        text-align: center !important;
+    }
+
+    .step-list {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.85em;
+    }
+
+    .highlight-green {
+        color: #001f3f;
+        font-weight: bold;
+    }
+/* --- Section Résumés (Flexbox adaptatif) --- */
+.summary-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.summary-item img {
+    width: 200px; /* Taille fixe sur grand écran */
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- MEDIA QUERIES (Le coeur du responsive) --- */
+
+/* Pour les tablettes et smartphones (en dessous de 768px) */
+@media (max-width: 768px) {
+    .header-card h1 {
+        font-size: 1.2rem; /* Réduction du titre */
+        padding: 10px;
+    }
+
+    .main-title {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /* On empile l'image et le texte verticalement */
+    .summary-item {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .summary-item img {
+        width: 100%; /* L'image prend toute la largeur */
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* On réduit la taille des jauges pour qu'elles rentrent sur petit écran */
+    .step {
+        height: 8px;
+    }
+}
+
+/* Pour les très petits écrans (en dessous de 480px) */
+@media (max-width: 480px) {
+    .activities-grid {
+        grid-template-columns: 1fr; /* Une seule colonne forcée */
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .timeline-container {
+        overflow-x: auto; /* Permet de swiper la timeline si elle est trop large */
+    }
+}
+
+/*POUR A PROPOS DE NOUS*/
+/* --- Base Flexible --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px; /* Réduit pour laisser plus de place sur mobile */
+}
+
+/* --- Grille À Propos / Membres --- */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permet le passage à la ligne */
+    gap: 40px;
+}
+
+.contact-info-block, .members-block {
+    flex: 1;
+    min-width: 300px; /* Force l'empilement si l'écran fait moins de 600px approx. */
+}
+
+/* --- Grille des Membres (Auto-ajustable) --- */
+.members-grid {
+    flex: 1;
+    display: grid;
+    /* Crée autant de colonnes que possible avec un minimum de 80px */
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    gap: 10px;
+}
+.member-card{
+    margin: 3px;
+    padding: 3px;
+}
+.member-card h4,
+.member-card p{
+    margin: 1px;
+}
+.member-photo img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* --- Documents & Contact --- */
+.docs-contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.documents-block {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-form-block {
+    flex: 1; /* Donne un peu plus de place au formulaire sur PC */
+    min-width: 300px;
+}
+
+.form {
+    max-width: 500px; 
+    margin: auto;
+    background: #001f3f; 
+    padding: 5px; 
+    border: 0 solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+   
+}
+.form input { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+.btn-send {
+    margin: auto;
+    background: var(--green);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    height: 30px;
+    font-weight: bold;
+    
+
+}
+
+/* --- Ajustements spécifiques via Media Queries --- */
+
+/* Tablettes et mobiles larges */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Nom et Email l'un sur l'autre */
+        gap: 0;
+    }
+
+    .docs-flex {
+        justify-content: center; /* Centre les documents sur mobile */
+        flex-wrap: wrap;
+    }
+
+    .header-card h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Très petits mobiles (iPhone SE, etc.) */
+@media (max-width: 480px) {
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes maximum pour éviter que ce soit trop petit */
+    }
+
+    .contact-details li {
+        font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+    }
+
+    .doc-card {
+        width: 45%; /* Les documents prennent la moitié de la largeur */
+    }
+    
+    .doc-preview {
+        display: none; /* On cache la petite preview image sur mobile pour gagner de la place */
+    }
+}
+
+/*POUR MEDIATHEQUE*/
+
+/* --- Grille Adaptative --- */
+.media-grid {
+    display: grid;
+    /* 'auto-fit' remplit la ligne automatiquement.
+       'minmax(300px, 1fr)' garantit que les cartes ne font jamais moins de 300px 
+       mais prennent toute la place disponible.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+/* --- Cartes Médias Flexibles --- */
+.media-card, .social-post-card {
+    width: 100%; /* S'adapte à la largeur de sa colonne */
+    max-width: 450px; /* Évite que la carte ne devienne trop géante sur de très grands écrans */
+    margin: 0 auto; /* Centre la carte si elle est seule sur une ligne */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image/Vidéo qui garde son ratio 16/9 peu importe la taille */
+.thumbnail {
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 16 / 9; 
+    background-color: #000;
+    transition: all 0.3s ease;
+    
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Boutons Adaptatifs --- */
+.media-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-action {
+    width: 100%; /* Les boutons prennent toute la largeur sur mobile pour être faciles à cliquer */
+    padding: 12px;
+    font-size: 0.95rem;
+    
+}
+
+
+
+/* --- MEDIA QUERIES (Ajustements fins) --- */
+
+/* Écrans de taille moyenne (Tablettes) */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Écrans de petite taille (Mobiles) */
+@media (max-width: 600px) {
+    .media-grid {
+        grid-template-columns: 1fr; /* Force une seule colonne */
+        gap: 40px; /* Plus d'espace entre les cartes pour mieux respirer */
+    }
+
+    .header-card {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .header-card h1 {
+        font-size: 1.1rem;
+    }
+
+    /* Agrandir les icônes de lecture pour les doigts sur mobile */
+    .play-overlay {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* --- Footer Styles --- */
+.main-footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding-top: 50px;
+    border-top: 3px solid var(--green);
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-about h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.footer-links h4, .footer-social h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+/* Réseaux Sociaux */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: var(--green);
+    transform: translateY(-5px);
+}
+
+/* Copyright Bar */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0,0,0,0.3);
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+}
